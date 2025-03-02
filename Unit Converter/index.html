@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+    <div class="container">
+        <div class="converter-card">
+            <h1>Unit Converter</h1>
+            
+            <div class="input-group">
+                <label for="value">Value</label>
+                <input id="value" type="text" placeholder="Enter Value">
+            </div>
+
+            <div class="input-group">
+                <label>From</label>
+                <select id="from-unit">
+                    <option  value="kilometers">Kilometers</option>
+                    <option  value="meters">Meters</option>
+
+                    <option  value="centimeters">Centimeters</option>
+
+                    <option  value="millimeters">Millimeters</option>
+
+                    <option  value="miles">Miles</option>
+
+                    <option  value="inches">Inches</option>
+
+                    <option  value="yards">Yards</option>
+                    <option  value="Square-Kilometers">Square Kilometers</option>
+                    <option  value="Square-Meters">Square Meters</option>
+
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>To</label>
+                <select id="to-unit">
+                    <option  value="meters">Meters</option>
+                    <option  value="kilometers">Kilometers</option>
+
+                    <option  value="centimeters">Centimeters</option>
+
+                    <option  value="millimeters">Millimeters</option>
+
+                    <option  value="miles">Miles</option>
+
+                    <option  value="inches">Inches</option>
+                    <option  value="yards">Yards</option>
+
+                    <option  value="Square-Kilometers">Square Kilometers</option>
+                    <option  value="Square-Meters">Square Meters</option>
+                </select>
+            </div>
+
+            <button class="convert-btn">Convert</button>
+
+            <div class="results">
+                <h2 id="result">Results:- </h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

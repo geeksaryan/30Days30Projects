@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* New gradient background */
+    color: #333; /* Darker text color for better contrast */
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.search-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box input {
+    width: 80%;
+    font-size: 20px;
+    color: #333; /* Darker text color */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 12px 16px;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+.search-box input::placeholder {
+    color: rgba(51, 51, 51, 0.7); /* Darker placeholder text */
+}
+
+.search-box input:focus {
+    background: rgba(255, 255, 255, 1); /* Solid white background on focus */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+.search-box button {
+    width: 46px;
+    height: 46px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333; /* Darker icon color */
+    transition: all 0.3s ease;
+}
+
+.search-box button:hover {
+    background: rgba(255, 255, 255, 1); /* Solid white background on hover */
+    transform: scale(1.1);
+}
+
+.weather-body {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 20px;
+    text-align: center;
+}
+
+.weather-body img {
+    width: 60%;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.weather-box {
+    margin-block: 20px;
+}
+
+.weather-box .temperature {
+    font-size: 48px;
+    font-weight: 800;
+    position: relative;
+    color: #333; /* Darker text color */
+}
+
+.weather-box .temperature sup {
+    font-size: 24px;
+    position: absolute;
+    font-weight: 600;
+}
+
+.weather-box .description {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 10px;
+    color: #555; /* Slightly lighter text color */
+}
+
+.weather-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.humidity, .wind {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 15px;
+    border-radius: 12px;
+    width: 48%;
+    transition: all 0.3s ease;
+}
+
+.humidity:hover, .wind:hover {
+    background: rgba(255, 255, 255, 1); /* Solid white background on hover */
+    transform: translateY(-5px);
+}
+
+.weather-details i {
+    font-size: 32px;
+    margin-right: 10px;
+    color: #333; /* Darker icon color */
+}
+
+.weather-details .text {
+    font-size: 16px;
+    color: #333; /* Darker text color */
+}
+
+.text span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.location-not-found {
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.location-not-found h1 {
+    font-size: 20px;
+    color: rgba(51, 51, 51, 0.8); /* Darker text color */
+    margin-block-end: 15px;
+}
+
+.location-not-found img {
+    width: 80%;
+    animation: shake 1s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .search-box input {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .search-box button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .weather-box .temperature {
+        font-size: 40px;
+    }
+
+    .weather-box .description {
+        font-size: 18px;
+    }
+
+    .weather-details {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .humidity, .wind {
+        width: 48%;
+    }
+}

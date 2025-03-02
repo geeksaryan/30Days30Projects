@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+} 
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+}
+
+.main {
+    width: 100%;
+    max-width: 1200px;
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+}
+
+#card {
+    height: 400px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+#card img {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+#card h1 {
+    font-size: 25px;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+#card h5 {
+    color: red;
+    font-size: 25px;
+    margin: 20px;
+    margin-bottom: 20px;
+}
+
+#card button {
+    background-color: cadetblue;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* #card #remove{
+    background-color: #dadada;
+    color: #111 ;
+} */
+
+#card button:hover {
+    background-color: darkcyan; 
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main {
+        justify-content: center; /* Center items on medium screens */
+        gap: 20px;
+    }
+
+    #card {
+        width: 280px;
+        height: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+        padding: 10px;
+    }
+
+    #card {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    #card h1 {
+        font-size: 20px;
+    }
+
+    #card h5 {
+        font-size: 18px;
+    }
+
+    #card button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

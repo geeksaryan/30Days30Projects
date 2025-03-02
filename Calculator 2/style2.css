@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calculator .output {
+    grid-column: 1 / 5;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: right;
+    padding: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.calculator button {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.calculator button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Operator buttons */
+.calculator button:nth-child(4n) {
+    background: #ff9800;
+}
+
+.calculator button:nth-child(4n):hover {
+    background: #ffb74d;
+}
+
+/* Special buttons */
+.calculator button:last-child {
+    background: #4caf50;
+}
+
+.calculator button:last-child:hover {
+    background: #66bb6a;
+}
+
+/* Span two columns */
+.span-two {
+    grid-column: span 2;
+}
